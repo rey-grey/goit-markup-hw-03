@@ -83,7 +83,7 @@ body {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-
+margin-right: 76px;
     
 }
 
@@ -94,7 +94,7 @@ body {
 
 .logo-part {
     color: #2e2f42;
-    margin-right: 76px;
+    
 }
 .menu {
     display: flex;
@@ -107,13 +107,6 @@ padding: 24px 0;
     gap:40px;
 }
     
-
-
-
-
-
-
-
 .nav-link {
     font-weight: 500;
     font-size: 16px;
@@ -121,6 +114,7 @@ padding: 24px 0;
     letter-spacing: 0.02em;
     color: #2e2f42;
     text-decoration: none;
+    padding: 24px 0
 }
 
 .nav-link:hover,
@@ -169,7 +163,7 @@ background: #2e2f42;
     text-align: center;
     letter-spacing: 0.02em;
     color: #ffffff;
-    width: 496px;
+   max-width: 496px;
     margin: 0 auto;
     margin-bottom: 48px;
     
@@ -210,9 +204,12 @@ display: block;
     width: 1px;
     height: 1px;
     margin: -1px;
-    padding: 0;
     border: 0;
-    clip: rect(0, 0, 0, 0);
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
     overflow: hidden;
 }
 .features-title {
@@ -274,6 +271,7 @@ width: calc((100% - 72px) / 4);;
 .team-info {
    
     text-align: center;
+    padding: 32px 0;
 }
 
 
@@ -362,6 +360,7 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     display: flex;
     flex-wrap: wrap;
     gap: 24px;
+    row-gap: 48px;
     
 
 }
