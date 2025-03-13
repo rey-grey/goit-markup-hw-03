@@ -24,11 +24,12 @@ h1, h2, h3, p {
     margin-bottom: 0;
 }
  .container {
-    max-width: 1158px;
+    width: 1158px;
     margin-left: auto;
     margin-right: auto;
     padding-left:15px;
     padding-right:15px;
+    display: flex;
     
  }
 
@@ -46,11 +47,11 @@ body {
 
 /* header */
 .header-section {
-    max-width: 1440px;
+    max-width: 100%;
     display: flex;
-    flex-direction: row;
+    align-items: center;
    justify-content: flex-start;
-   border-bottom: 1 px solid #f4f4fd; ;
+border-bottom: 1px solid #e7e9fc;
    padding-top: 24px;
    padding-bottom: 24px;
 
@@ -58,28 +59,24 @@ body {
 
 .nav {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     
     
 }
 .menu {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
     gap: 40px;
     margin-right: 332px;
+    padding: 24px 0;
   
     
   
 }
 .contacts-list {
     display: flex;
-    
-    
     gap:40px;
-    
-    
 }
+    
 
 
 
@@ -157,6 +154,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 188px 0 188px
 }
 
 
@@ -167,13 +165,19 @@ body {
     letter-spacing: 0.02em;
     color: #ffffff;
     width: 496px;
-    height: auto;
     margin: 0 auto;
+    margin-bottom: 48px;
     
 }
 
 .main-btn {
-    background-color: #4D5AE5;
+display: block;
+    min-width: 169px;
+    height: 56px;
+    margin: 48px auto 0;
+    border: none;
+    border-radius: 4px;
+    background-color: #4d5ae5;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 16px;
@@ -181,13 +185,6 @@ body {
     letter-spacing: 0.04em;
     color: #ffffff;
     cursor: pointer;
-    
-    border: 1px solid #000;
-    border-radius: 4px;
-    width: 170px;
-    height: 51px;
-    margin-top: 48px;
-    
 
       
 }
@@ -201,13 +198,16 @@ body {
 
 
 /* features */
-.features {
-    background-color: #ffffff;
-    max-width: 1128px;
-    width: 100%;
-    margin: 0 auto;
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
 }
-
 .features-title {
 visibility: hidden;
 }
@@ -215,7 +215,6 @@ visibility: hidden;
 .features-list {
     list-style: none;
     display: flex;
-    flex-direction: row;
     gap: 24px;
    
     
@@ -223,10 +222,9 @@ visibility: hidden;
 
 .features-item {
 display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: stretch;
+flex-direction: column;
+align-items: stretch;
+width: calc((100% - 72px) / 4);;
    
 
 }
@@ -241,6 +239,7 @@ display: flex;
     letter-spacing: 0.02em;
     color: #2e2f42;
     padding-bottom: 8px;
+    margin-bottom: 8px;
     
 }
 
@@ -249,7 +248,7 @@ display: flex;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
-    display: flex;
+    
    
     
 }
@@ -260,8 +259,13 @@ display: flex;
 .team {
     background-color: #f4f4fd;
     width: 100%;
+    max-width: none;
     padding: 120px 0;
     
+}
+.team-info {
+    padding: 32px 0;
+    text-align: center;
 }
 
 
@@ -310,7 +314,8 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    align-items: center;
+    text-align: center;
+    margin-bottom: 8px;
     
 }
 
@@ -319,15 +324,16 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    text-align: center;
 }
 
 /* portfolio */
 
 .portfolio {
 
-    max-width: 100%;
+    width: 100%;
     margin: 0 auto;
-    
+    padding-bottom: 120px 0;
 }
 
 .portfolio-title {
@@ -355,7 +361,7 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 
 .portfolio-item {
     background-color: #ffffff;
-    width: calc((100%-48px)/3);
+    width: calc((100% - 48px) / 3);
     display: flex;
     flex-direction: column;
 
@@ -395,14 +401,17 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 .footer {
     background-color: #2e2f42;
     width: 100%;
-    padding: 100px 0;
+    padding-top: 100px;
 }
 
 .footer .container {
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    flex-direction: column;
     
+}
+.footer .logo {
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer-section {
@@ -416,7 +425,7 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
     line-height: 1.5;
     color: #F4F4FD;
     letter-spacing: 0.02em;
-    width: 264px;
+    max-width: 264px;
     text-align: left;
     
 }
