@@ -60,8 +60,12 @@ body {
 .header {
     
    border-bottom: 1px solid #e7e9fc;
-   
 
+}
+.header-content {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
 }
 
 .nav {
@@ -81,6 +85,11 @@ body {
     color: #4d5ae5;
 
     
+}
+
+
+.logo-part-footer {
+    color: #f4f4fd
 }
 
 .logo-part {
@@ -103,9 +112,7 @@ padding: 24px 0;
 
 
 
-.logo-part-footer {
-    color: #f4f4fd
-}
+
 
 .nav-link {
     font-weight: 500;
@@ -150,11 +157,9 @@ padding: 24px 0;
 
 /* hero section */
 
-
 .hero {
-    background-color: #2e2f42;
-   
-    padding: 188px 0 188px
+background: #2e2f42;
+    padding: 188px 0;
 }
 
 
@@ -178,7 +183,7 @@ display: block;
     border: none;
     border-radius: 4px;
     background-color: #4d5ae5;
-    font-family: "Roboto", sans-serif;
+    
     font-weight: 700;
     font-size: 16px;
     line-height: 1.5;
@@ -186,6 +191,7 @@ display: block;
     color: #ffffff;
     cursor: pointer;
     padding: 16px 32px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 
       
 }
@@ -216,6 +222,7 @@ visibility: hidden;
 .features-list {
     list-style: none;
     display: flex;
+    justify-content: center;
     gap: 24px;
    
     
@@ -257,7 +264,7 @@ width: calc((100% - 72px) / 4);;
 
 /* team */
 
-.team {
+.team-section {
     background-color: #f4f4fd;
     width: 100%;
     max-width: none;
@@ -265,7 +272,7 @@ width: calc((100% - 72px) / 4);;
     
 }
 .team-info {
-    padding: 32px 0;
+   
     text-align: center;
 }
 
@@ -288,7 +295,7 @@ width: calc((100% - 72px) / 4);;
 .team-list {
     list-style: none;
     display: flex;
-    flex-direction: row;
+justify-content: center;
     gap: 24px;
 
 }
@@ -402,31 +409,22 @@ box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.1
 .footer {
     background-color: #2e2f42;
     width: 100%;
-    padding-top: 100px;
+    padding: 100px 0;
 }
 
-.footer .container {
-    display: flex;
-    flex-direction: column;
-    
-}
+
 .footer .logo {
     display: inline-block;
     margin-bottom: 16px;
 }
 
-.footer-section {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px;
-}
+
 
 .footer-text {
     line-height: 1.5;
     color: #F4F4FD;
     letter-spacing: 0.02em;
     max-width: 264px;
-    text-align: left;
+    
     
 }
