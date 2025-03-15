@@ -99,7 +99,7 @@ margin-right: 76px;
 .menu {
     display: flex;
     gap: 40px;
-padding: 24px 0;
+
 }
 
 .nav-link {
@@ -110,6 +110,8 @@ padding: 24px 0;
     color: #2e2f42;
     text-decoration: none;  
     display: block;
+    padding-top: 24px;
+    padding-bottom: 24px;
 }
 
 .contacts-list {
